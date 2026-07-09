@@ -3,6 +3,7 @@
 import {
   createContext,
   useContext,
+  useState,
   useReducer,
   useEffect,
   useCallback,
@@ -71,7 +72,16 @@ function getInitialItems(): CartItem[] {
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, dispatch] = useReducer(cartReducer, [], getInitialItems);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const initRef = useRef(true);
   const hasSynced = useRef(false);
+
+  useEffect(() => {
+    if (initRef.current) {
+      initRef.current = false;
+      setIsLoaded(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (!hasSynced.current) {
@@ -116,7 +126,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       clearCart,
       totalItems,
       totalPrice,
-      isLoaded: true,
+      isLoaded,
     }),
     [
       items,
@@ -126,6 +136,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       clearCart,
       totalItems,
       totalPrice,
+      isLoaded,
     ]
   );
 

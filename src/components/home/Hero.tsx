@@ -68,10 +68,10 @@ export default function Hero() {
             Shop Catalog
           </Link>
           <Link
-            href="/specs"
+            href="/performance"
             className="glass inline-flex items-center justify-center rounded px-6 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-on-surface transition-colors hover:border-primary/40 md:px-8"
           >
-            Track Specs
+            Performance
           </Link>
         </div>
 

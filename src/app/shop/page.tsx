@@ -71,19 +71,18 @@ function ShopContent() {
     });
   }, [filters]);
 
-  const breadcrumbItems = [
+  const breadcrumbItems: { label: string; href?: string }[] = [
     { label: "Home", href: "/" },
-    { label: "Shop" },
   ];
 
   if (categoryParam) {
     const cat = products.find(
       (p) => p.category.slug === categoryParam
     )?.category;
-    if (cat) {
-      breadcrumbItems.splice(1, 0, { label: "Shop", href: "/shop" });
-      breadcrumbItems.splice(2, 0, { label: cat.name });
-    }
+    breadcrumbItems.push({ label: "Shop", href: "/shop" });
+    if (cat) breadcrumbItems.push({ label: cat.name });
+  } else {
+    breadcrumbItems.push({ label: "Shop" });
   }
 
   return (
