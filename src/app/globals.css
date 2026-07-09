@@ -59,6 +59,14 @@ body {
 
 /* Technical Grid Background */
 .technical-grid {
+  position: relative;
+}
+.technical-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -107,7 +115,7 @@ body {
 }
 
 .glow-hover {
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .glow-hover:hover {
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
@@ -115,7 +123,8 @@ body {
 
 /* Bento Card Transitions */
 .bento-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bento-card:hover {
   transform: translateY(-4px);
