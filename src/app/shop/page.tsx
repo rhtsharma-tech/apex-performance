@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useMemo, Suspense } from "react";
+import { useState, useMemo, Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { FilterState } from "@/types";
 import { products } from "@/lib/data";
+import { useNav } from "@/lib/nav-context";
 import FilterSidebar from "@/components/shop/FilterSidebar";
 import ProductGrid from "@/components/shop/ProductGrid";
 import Breadcrumb from "@/components/layout/Breadcrumb";
@@ -11,6 +12,11 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 function ShopContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
+  const { setLastSection } = useNav();
+
+  useEffect(() => {
+    setLastSection("shop");
+  }, [setLastSection]);
 
   const [filters, setFilters] = useState<FilterState>({
     brands: [],

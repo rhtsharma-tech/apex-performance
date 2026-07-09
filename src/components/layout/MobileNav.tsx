@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { LayoutGrid, Gauge, ShoppingBag, User } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
+import { useNav } from "@/lib/nav-context";
 
 const tabs = [
   { label: "Garage", href: "/", icon: LayoutGrid },
@@ -16,6 +17,7 @@ const tabs = [
 export default function MobileNav() {
   const pathname = usePathname();
   const { totalItems, isLoaded } = useCart();
+  const { lastSection } = useNav();
 
   return (
     <nav className="fixed bottom-4 left-4 right-4 z-50 lg:hidden">
@@ -25,7 +27,10 @@ export default function MobileNav() {
             const isActive =
               tab.href === "/"
                 ? pathname === "/"
-                : pathname.startsWith(tab.href);
+                : pathname.startsWith(tab.href) ||
+                  (tab.href === "/shop" &&
+                    pathname.startsWith("/product") &&
+                    lastSection === "shop");
             const Icon = tab.icon;
 
             return (

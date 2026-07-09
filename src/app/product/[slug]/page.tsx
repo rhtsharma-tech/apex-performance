@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
 import Breadcrumb from "@/components/layout/Breadcrumb";
+import SectionTracker from "@/components/layout/SectionTracker";
 import ProductGallery from "@/components/product/ProductGallery";
 import ProductInfo from "@/components/product/ProductInfo";
 import SpecsTable from "@/components/product/SpecsTable";
@@ -37,6 +38,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <SectionTracker section="shop" />
       <Breadcrumb items={breadcrumbItems} />
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

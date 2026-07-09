@@ -123,7 +123,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
       {/* Mobile toggle */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden fixed bottom-6 right-6 z-30 bg-primary text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+        className="lg:hidden fixed bottom-24 right-6 z-40 bg-primary text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
       >
         <span className="font-mono text-xs font-bold">F</span>
       </button>

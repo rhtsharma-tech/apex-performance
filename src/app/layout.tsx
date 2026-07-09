@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { CartProvider } from "@/lib/cart-context";
+import { NavProvider } from "@/lib/nav-context";
 import Navbar from "@/components/layout/Navbar";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
@@ -42,12 +43,14 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-background font-body technical-grid">
         <CartProvider>
-          <Navbar />
-          <main className="pt-16 pb-24">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-          <MobileNav />
+          <NavProvider>
+            <Navbar />
+            <main className="pt-16 pb-24">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+            <MobileNav />
+          </NavProvider>
         </CartProvider>
       </body>
     </html>
