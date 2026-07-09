@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,padding] duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 overflow-visible transition-[background-color,box-shadow,padding] duration-300 ${
         scrolled
           ? "glass-nav shadow-lg shadow-black/20 py-2"
           : "bg-transparent py-4"
@@ -34,8 +34,8 @@ export default function Navbar() {
     >
       <div className="max-w-[1600px] mx-auto flex items-center justify-between px-5 lg:px-[var(--spacing-margin-desktop)]">
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
-          <Image src="/logo.png" alt="Apex Performance" width={40} height={40} className="h-10 w-auto" />
+        <Link href="/" className="flex items-center group overflow-visible">
+          <Image src="/logo.png" alt="Apex Performance" width={80} height={40} className="h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav Links */}
