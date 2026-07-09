@@ -36,14 +36,13 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero */}
-      <section className="mt-6 mb-16">
-        <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-4">
+      <section className="mt-6 mb-16 md:mb-20">
+        <div className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-white/10 px-4 py-2 mb-4">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
           </span>
           <span className="font-mono text-xs uppercase tracking-widest text-on-surface-dim">
@@ -158,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="text-center mb-8">
+      <section className="text-center mb-24 md:mb-12">
         <h2 className="font-display text-2xl font-bold tracking-tight">
           Ready to see what{" "}
           <span className="italic text-primary">precision</span> looks like?
@@ -173,6 +172,6 @@ export default function AboutPage() {
           Shop Now
         </Link>
       </section>
-    </>
+    </div>
   );
 }

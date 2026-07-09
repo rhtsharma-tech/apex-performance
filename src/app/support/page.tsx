@@ -71,14 +71,13 @@ export default function SupportPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero */}
       <section className="mt-6 mb-16">
-        <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-4">
+        <div className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-white/10 px-4 py-2 mb-4">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
           </span>
           <span className="font-mono text-xs uppercase tracking-widest text-on-surface-dim">
@@ -187,6 +186,6 @@ export default function SupportPage() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }
