@@ -5,7 +5,6 @@ import { NavProvider } from "@/lib/nav-context";
 import Navbar from "@/components/layout/Navbar";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
-import PageTransition from "@/components/layout/PageTransition";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -46,7 +45,7 @@ export default function RootLayout({
           <NavProvider>
             <Navbar />
             <main className="pt-16 pb-24">
-              <PageTransition>{children}</PageTransition>
+              {children}
             </main>
             <Footer />
             <MobileNav />
