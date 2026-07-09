@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Mobile search icon */}
           <Link
             href="/shop"
-            className="lg:hidden flex items-center justify-center w-9 h-9 rounded-full glass text-on-surface-muted hover:text-primary transition-colors"
+            className="lg:hidden flex items-center justify-center w-9 h-9 text-on-surface-muted hover:text-primary transition-colors"
             aria-label="Search"
           >
             <Search className="w-4 h-4" />
