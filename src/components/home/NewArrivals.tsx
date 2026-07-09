@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
 import { products } from "@/lib/data";
+import { useCart } from "@/lib/cart-context";
 import { cn } from "@/lib/utils";
 
 export default function NewArrivals() {
