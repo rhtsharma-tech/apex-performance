@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, Filter } from "lucide-react";
 import { FilterState } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -125,7 +125,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
         onClick={() => setIsOpen(true)}
         className="lg:hidden fixed bottom-24 right-6 z-40 bg-primary text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
       >
-        <span className="font-mono text-xs font-bold">F</span>
+        <Filter className="w-5 h-5" />
       </button>
 
       {/* Mobile slide-over */}
