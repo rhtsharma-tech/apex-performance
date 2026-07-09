@@ -18,7 +18,7 @@ export default function Hero() {
   }, [advance]);
 
   return (
-    <section className="relative h-[calc(100dvh-4rem)] w-full overflow-hidden bg-background">
+    <section className="relative h-[calc(100svh-4rem)] w-full overflow-hidden bg-background">
       {heroSlides.map((slide, i) => (
         <div
           key={i}
