@@ -13,12 +13,12 @@ const breadcrumbItems = [
 
 export default function PerformancePage() {
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero */}
-      <section className="relative -mx-4 sm:-mx-6 lg:-mx-8 mt-6 mb-16 overflow-hidden rounded-lg">
-        <div className="relative h-[400px] md:h-[500px]">
+      <section className="relative -mx-4 sm:-mx-6 lg:-mx-8 mt-6 mb-20 lg:mb-24 overflow-hidden rounded-lg">
+        <div className="relative h-[280px] md:h-[500px]">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpi9O6_yBMHcNq-dgITm_h4-CMulvsiqTIN0lBSvAMA0m-gO1lft8NCoP5gmb668TEUZ4imsKkdNF7j8yzBVwRlf8_25RapRmVj3IAsTIInD4rd0P6vo3Q-3GY_MqhvcVHgUB_8slfB6UCNKN-JnEQFVBCTohdAx5BmAdOcJ3K_Q4zXkQE5qPcmRxo12Lzj1AJcTBb3CzDcVwEE35dW_q9DPpUAjcWmKVNJjzfgjpK-B8aBecF6A9EOYFWbJqS__eNUB3wmONfrnMs"
             alt="Track-validated performance"
@@ -28,10 +28,9 @@ export default function PerformancePage() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
-            <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-4 w-fit">
+          <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-white/10 px-4 py-2 mb-4 w-fit">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
               <span className="font-mono text-xs uppercase tracking-widest text-on-surface-dim">
@@ -51,7 +50,7 @@ export default function PerformancePage() {
       </section>
 
       {/* Featured Products */}
-      <section className="mb-16">
+      <section className="mb-20 lg:mb-24">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -69,14 +68,14 @@ export default function PerformancePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProducts.map((product) => (
             <Link
               key={product.id}
               href={`/product/${product.slug}`}
               className="group relative overflow-hidden rounded-lg glass-card bento-card"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-square md:aspect-[4/3] overflow-hidden">
                 <Image
                   src={product.thumbnail}
                   alt={product.name}
@@ -97,7 +96,7 @@ export default function PerformancePage() {
                   </span>
                 )}
               </div>
-              <div className="p-5">
+              <div className="p-4 md:p-5">
                 <p className="font-mono text-xs uppercase tracking-wider text-on-surface-muted">
                   {product.category.name}
                 </p>
@@ -139,7 +138,7 @@ export default function PerformancePage() {
       </section>
 
       {/* Stats */}
-      <section className="mb-16 rounded-lg glass-panel p-8 md:p-12">
+      <section className="mb-20 lg:mb-24 rounded-lg glass-panel p-5 md:p-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {[
             { value: "500+", label: "Track Validations" },
@@ -147,7 +146,7 @@ export default function PerformancePage() {
             { value: "98%", label: "Customer Rating" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <span className="font-display text-4xl font-bold text-primary md:text-5xl">
+              <span className="font-display text-3xl font-bold text-primary md:text-5xl">
                 {stat.value}
               </span>
               <p className="mt-2 font-mono text-xs uppercase tracking-wider text-on-surface-muted">
@@ -159,7 +158,7 @@ export default function PerformancePage() {
       </section>
 
       {/* CTA */}
-      <section className="text-center mb-8">
+      <section className="text-center mb-24 md:mb-12">
         <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
           Ready to <span className="italic text-primary">Upgrade</span>?
         </h2>
@@ -173,6 +172,6 @@ export default function PerformancePage() {
           Explore Full Catalog
         </Link>
       </section>
-    </>
+    </div>
   );
 }
