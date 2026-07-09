@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
-import CartProvider from "@/lib/cart-context";
+import { CartProvider } from "@/lib/cart-context";
 import Navbar from "@/components/layout/Navbar";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/layout/PageTransition";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -42,7 +43,9 @@ export default function RootLayout({
       <body className="min-h-full bg-background font-body technical-grid">
         <CartProvider>
           <Navbar />
-          <main className="pt-16 pb-20">{children}</main>
+          <main className="pt-16 pb-24">
+            <PageTransition>{children}</PageTransition>
+          </main>
           <Footer />
           <MobileNav />
         </CartProvider>

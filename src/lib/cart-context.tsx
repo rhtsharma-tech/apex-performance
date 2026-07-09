@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import { Product, CartItem } from "@/types";
 
 interface CartContextType {
@@ -11,27 +11,33 @@ interface CartContextType {
   clearCart: () => void;
   totalItems: number;
   totalPrice: number;
+  isLoaded: boolean;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
-  const [loaded, setLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const hasSynced = useRef(false);
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem("apex-cart");
       if (stored) setItems(JSON.parse(stored));
     } catch {}
-    setLoaded(true);
+    setIsLoaded(true);
   }, []);
 
   useEffect(() => {
-    if (loaded) {
+    if (!hasSynced.current) {
+      hasSynced.current = true;
+      return;
+    }
+    if (isLoaded) {
       localStorage.setItem("apex-cart", JSON.stringify(items));
     }
-  }, [items, loaded]);
+  }, [items, isLoaded]);
 
   const addItem = useCallback((product: Product) => {
     setItems((prev) => {
@@ -78,6 +84,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         clearCart,
         totalItems,
         totalPrice,
+        isLoaded,
       }}
     >
       {children}

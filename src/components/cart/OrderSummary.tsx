@@ -9,7 +9,7 @@ interface OrderSummaryProps {
 }
 
 export default function OrderSummary({ shipping }: OrderSummaryProps) {
-  const { items, totalPrice } = useCart();
+  const { totalPrice } = useCart();
   const logisticsFee = shipping === "express" ? 120 : 45;
   const total = totalPrice + logisticsFee;
 

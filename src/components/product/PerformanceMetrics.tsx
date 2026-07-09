@@ -1,6 +1,6 @@
 "use client";
 
-import { Analytics, Download } from "lucide-react";
+import { BarChart3, Download } from "lucide-react";
 import { Metric } from "@/types";
 
 interface PerformanceMetricsProps {
@@ -11,7 +11,7 @@ export default function PerformanceMetrics({ metrics }: PerformanceMetricsProps)
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <Analytics className="w-5 h-5 text-primary" />
+        <BarChart3 className="w-5 h-5 text-primary" />
         <h3 className="font-display text-xl uppercase text-on-surface">Performance Metrics</h3>
       </div>
 
