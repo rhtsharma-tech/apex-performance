@@ -27,12 +27,20 @@ export default function Hero() {
           }`}
         >
           <Image
-            src={slide.image}
+            src={slide.mobileImage}
             alt={slide.tag}
             fill
             sizes="100vw"
             priority={i === 0}
-            className="object-cover"
+            className="object-cover md:hidden"
+          />
+          <Image
+            src={slide.desktopImage}
+            alt={slide.tag}
+            fill
+            sizes="100vw"
+            priority={i === 0}
+            className="object-cover hidden md:block"
           />
         </div>
       ))}

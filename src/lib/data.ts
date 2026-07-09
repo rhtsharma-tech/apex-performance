@@ -442,18 +442,18 @@ export const products: Product[] = [
 
 export const heroSlides = [
   {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBmDw7rYrJrkj0InjPRtUPxQ3oDr13ky0pnLjVxReq_Py53zuUP5iehNN8xWq-eh3iQZ4O1haztgJLOyHN-7Hcn1m4nsamtmVsVu94OsR1hHkw6htCbLHFAj61gGzzUut-dnlq36wqciFbDZjtI_2FB4oedUUEZhxeVXbfsJnY0Lzv_a19U3FMQEOkwzqRj2YiQ3cEs4AGEIPLuEbzlTCNXchLTCAoyhx4pEB9T79fZd5MOFaWUV6cVY9F-kVgtgQw3acMcE6MuoWie",
+    desktopImage: "/hero-images/desktop-hero-1.png",
+    mobileImage: "/hero-images/mobile-hero-1.png",
     tag: "2024 Drivetrain Collection Live",
   },
   {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBTwZtwkurDXzYkSk1Hpwv4nAUNI2BLny162QkNzIELiMfyN8NahQ-U9dUzqMrAqYmJPhiCSeWGQ3ijVjiAlEvKrAjmruAeT2hE4bBdLoo3-M0W_3oP39rMGO9kSvxOb2nI2_YrE492-WfX4-lFSH-RdBt0IRUX4KQKIscoAoJ2yX4a7j4rr7SMSdI2hD3yW6zrkbif31KH9Jl0INODLLY29GEQ7vmoVNpv-x80v4eqcGyYa-TSBosT3Vg4Mnz695MdSgZ9Jdn9L3Zn",
+    desktopImage: "/hero-images/desktop-hero-2.png",
+    mobileImage: "/hero-images/mobile-hero-2.png",
     tag: "New Aero Collection",
   },
   {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpi9O6_yBMHcNq-dgITm_h4-CMulvsiqTIN0lBSvAMA0m-gO1lft8NCoP5gmb668TEUZ4imsKkdNF7j8yzBVwRlf8_25RapRmVj3IAsTIInD4rd0P6vo3Q-3GY_MqhvcVHgUB_8slfB6UCNKN-JnEQFVBCTohdAx5BmAdOcJ3K_Q4zXkQE5qPcmRxo12Lzj1AJcTBb3CzDcVwEE35dW_q9DPpUAjcWmKVNJjzfgjpK-B8aBecF6A9EOYFWbJqS__eNUB3wmONfrnMs",
+    desktopImage: "/hero-images/desktop-hero-3.png",
+    mobileImage: "/hero-images/mobile-hero-3.png",
     tag: "Track-Tested Components",
   },
 ];
