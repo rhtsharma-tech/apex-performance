@@ -41,9 +41,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex h-full flex-col items-start justify-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)]">
-        <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-4 md:mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full bg-surface/60 border border-white/10 px-4 py-2 mb-4 md:mb-8">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
           </span>
           <span className="font-mono text-xs uppercase tracking-widest text-on-surface-dim">
