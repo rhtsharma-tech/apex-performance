@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Search } from "lucide-react";
 
@@ -33,15 +34,8 @@ export default function Navbar() {
     >
       <div className="max-w-[1600px] mx-auto flex items-center justify-between px-5 lg:px-[var(--spacing-margin-desktop)]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-yellow-500 flex items-center justify-center">
-            <span className="text-black font-display font-bold text-sm">
-              A
-            </span>
-          </div>
-          <span className="font-display font-bold text-xl text-on-surface tracking-wide">
-            APEX
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image src="/logo.png" alt="Apex Performance" width={40} height={40} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav Links */}

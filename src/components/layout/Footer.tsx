@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock, Share, Globe, Mail } from "lucide-react";
 
 const shopLinks = [
@@ -27,14 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-yellow-500 flex items-center justify-center">
-                <span className="text-black font-display font-bold text-sm">
-                  A
-                </span>
-              </div>
-              <span className="font-display font-bold text-xl text-on-surface tracking-wide">
-                APEX
-              </span>
+              <Image src="/logo.png" alt="Apex Performance" width={40} height={40} className="h-10 w-auto" />
             </Link>
             <p className="text-on-surface-dim text-sm leading-relaxed mb-6">
               Premium performance parts engineered for enthusiasts who demand
