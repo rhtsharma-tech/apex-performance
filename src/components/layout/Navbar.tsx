@@ -8,9 +8,9 @@ import { Search } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
-  { label: "Performance", href: "/" },
-  { label: "About", href: "/" },
-  { label: "Support", href: "/" },
+  { label: "Performance", href: "/performance" },
+  { label: "About", href: "/about" },
+  { label: "Support", href: "/support" },
 ];
 
 export default function Navbar() {

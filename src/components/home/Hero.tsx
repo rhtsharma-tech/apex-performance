@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex h-full flex-col items-start justify-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)]">
-        <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 mb-4 md:mb-8">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -51,32 +51,32 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="font-display text-6xl font-bold leading-none tracking-tight md:text-8xl lg:text-9xl">
+        <h1 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-8xl md:leading-none lg:text-9xl">
           PERFORMANCE{" "}
           <span className="italic text-primary">REDEFINED</span>
         </h1>
 
-        <p className="mt-6 max-w-xl font-body text-lg text-on-surface-muted md:text-xl">
+        <p className="mt-3 max-w-xl font-body text-base text-on-surface-muted md:mt-6 md:text-xl">
           Precision-engineered components for drivers who demand more. From
           track-day builds to daily-driven machines.
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-wrap gap-3 md:mt-10 md:gap-4">
           <Link
             href="/shop"
-            className="inline-flex items-center justify-center rounded bg-primary px-8 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition-colors hover:bg-primary-dim"
+            className="inline-flex items-center justify-center rounded bg-primary px-6 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition-colors hover:bg-primary-dim md:px-8"
           >
             Shop Catalog
           </Link>
           <Link
             href="/specs"
-            className="glass inline-flex items-center justify-center rounded px-8 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-on-surface transition-colors hover:border-primary/40"
+            className="glass inline-flex items-center justify-center rounded px-6 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-on-surface transition-colors hover:border-primary/40 md:px-8"
           >
             Track Specs
           </Link>
         </div>
 
-        <div className="absolute bottom-12 left-[var(--spacing-margin-mobile)] flex gap-2 md:left-[var(--spacing-margin-desktop)]">
+        <div className="absolute bottom-28 left-[var(--spacing-margin-mobile)] flex gap-2 md:bottom-12 md:left-[var(--spacing-margin-desktop)]">
           {heroSlides.map((_, i) => (
             <button
               key={i}

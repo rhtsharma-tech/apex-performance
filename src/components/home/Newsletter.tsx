@@ -51,7 +51,7 @@ export default function Newsletter() {
             sizes="50vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-primary/20" />
+          <div className="absolute inset-0 bg-primary/20 md:hidden" />
         </div>
       </div>
     </section>

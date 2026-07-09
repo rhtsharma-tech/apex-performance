@@ -21,7 +21,7 @@ const supportLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-white/5">
+    <footer className="bg-surface border-t border-white/5 pb-24 lg:pb-0">
       <div className="max-w-[1600px] mx-auto px-5 lg:px-[var(--spacing-margin-desktop)] py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
